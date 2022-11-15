@@ -71,3 +71,18 @@ peticion.addEventListener("readystatechange", function () {
 });
 
 peticion.send();
+
+var buttonCaro = document.querySelector ("#Caro");
+
+    buttonCaro.addEventListener("click", function () {
+    var productosCarritos = document.querySelector(".carrito").children;
+
+    for (let index = 0; index < productosCarritos.length; index++) {
+        const productoRow = productosCarritos[index];
+
+        let productoNombre = productoRow.children[0].innerText;
+        let productoPrecio = productoRow.children[1].innerText;
+        console.log(productoNombre, productoPrecio);
+    }
+    console.log("el producto mas caro es; TV",)
+});
